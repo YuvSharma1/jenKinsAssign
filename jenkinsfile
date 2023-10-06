@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+    environment {
+        notifyEmail = "sharmayuvraj925@gmail.com"
+     }
+    tools {
+        // Specify the Maven tool installation using the 'tool' step
+        // Replace 'MAVEN_HOME' with the actual name of your Maven tool installation
+        maven 'apache-maven-3.6.3'
+    }
+    triggers {
+        cron('0 06 * * *')
+    }
+    stages {
+        stage("code checkout") {
+            steps {
+                bat "echo helloo"
+            }
+        }
+        stage("code build") {
+            steps {
+                bat "mvn clean"
+            }
+        }
+        stage("unit test") {
+            steps {
+                bat "mvn test"
+            }
+        }
+    }
+    post {
+        success {
+            bat "echo success"
+        }
+    }
+}
