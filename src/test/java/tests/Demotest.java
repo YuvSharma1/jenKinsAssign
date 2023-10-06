@@ -7,11 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import base.BaseClass;
 
 //import org.testng.annotations.Test;
 
-public class Demotest extends BaseClass {
+public class Demotest  {
+	public static WebDriver driver;
 	
 	
 	
@@ -19,9 +19,10 @@ public class Demotest extends BaseClass {
 	public void test1() throws InterruptedException {
 //		System.setProperty("webdriver.chrome.driver";
 //		WebDriver driver = new ChromeDriver();
-		
+		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 		//driver.findElement(By.name("q"))
+		
 		driver.findElement(By.xpath("//*[@name='q']")).sendKeys("iphone",Keys.ENTER);
 		Thread.sleep(5000);
 		driver.quit();
@@ -30,7 +31,7 @@ public class Demotest extends BaseClass {
 	public void test2() throws InterruptedException {
 //		System.setProperty("webdriver.chrome.driver";
 //		WebDriver driver = new ChromeDriver();
-		
+		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 		//driver.findElement(By.name("q"))
 		driver.findElement(By.xpath("//*[@name='q']")).sendKeys("oneplus",Keys.ENTER);
@@ -40,7 +41,7 @@ public class Demotest extends BaseClass {
 	public void test3() throws InterruptedException {
 //		System.setProperty("webdriver.chrome.driver";
 //		WebDriver driver = new ChromeDriver();
-		
+		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 		//driver.findElement(By.name("q"))
 		driver.findElement(By.xpath("//*[@name='q']")).sendKeys("samsung",Keys.ENTER);
@@ -50,7 +51,7 @@ public class Demotest extends BaseClass {
 	public void test4() throws InterruptedException {
 //		System.setProperty("webdriver.chrome.driver";
 //		WebDriver driver = new ChromeDriver();
-		
+		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 		//driver.findElement(By.name("q"))
 		driver.findElement(By.xpath("//*[@name='q']")).sendKeys("vivo",Keys.ENTER);
@@ -60,7 +61,7 @@ public class Demotest extends BaseClass {
 	public void test5() throws InterruptedException {
 //		System.setProperty("webdriver.chrome.driver";
 //		WebDriver driver = new ChromeDriver();
-		
+		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 		//driver.findElement(By.name("q"))
 		driver.findElement(By.xpath("//*[@name='q']")).sendKeys("oppo",Keys.ENTER);
@@ -70,7 +71,7 @@ public class Demotest extends BaseClass {
 	public void test6() throws InterruptedException {
 //		System.setProperty("webdriver.chrome.driver";
 //		WebDriver driver = new ChromeDriver();
-		
+		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 		//driver.findElement(By.name("q"))
 		driver.findElement(By.xpath("//*[@name='q']")).sendKeys("realme",Keys.ENTER);
